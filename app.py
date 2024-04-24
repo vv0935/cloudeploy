@@ -26,7 +26,7 @@ jobs=[
 def hello():
   return render_template('home.html',JOBS=jobs,company_name='Jovian')
 
-@app.route("api/JOBS")
+@app.route("/api/JOBS")
 def view_jobs():
   return jsonify(jobs)
 if __name__ == '__main__':
