@@ -7,9 +7,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head> 
 <body >
+  {% include 'navbar.html' %}
     <style>
         #banner{
-            height: 550px;
+            height: 350px;
             width: 100%;
             object-fit: cover;
         }
@@ -19,7 +20,12 @@
     <div class="container">
         <h1 class="text-center mt-4 mb-4">{{company_name}} Carriers</h1>
         <img id="banner" class="img-fluid" src="static/OIP.jpeg" width="500px" height="300">
-        <P class="fs-5 mt-4 mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam corporis ipsum culpa maiores soluta voluptates facilis nulla. Veniam soluta magnam similique itaque delectus consequatur fuga cumque! Distinctio impedit consectetur eligendi.</P>
+      <div class="row mt-4">
+        <P class="fs-5 mt-4 mb-4 col-md-6">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam corporis ipsum culpa maiores soluta voluptates facilis nulla. Veniam soluta magnam similique itaque delectus consequatur fuga cumque! Distinctio impedit consectetur eligendi.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam corporis ipsum culpa maiores soluta voluptates facilis nulla. Veniam soluta magnam similique itaque delectus consequatur fuga cumque! Distinctio impedit consectetur eligendi.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam corporis ipsum culpa maiores soluta voluptates facilis nulla. Veniam soluta magnam similique itaque delectus consequatur fuga cumque! Distinctio impedit consectetur eligendi.</P>
+
+        <img id="people" class="d-none d-md-block img-fluid col-md-6" src="static/people.jpg" style="border-radius:50px; height: 350px">
+        
+      <div>
         <h2 class="text-center mt-4 mb-4">Open Positions</h2>
         <div style="font-size: 15px;">
           {% for JOB in JOBS %}
@@ -27,12 +33,12 @@
           {% endfor %}
         </div>
         <div class="text-center">
-            <button class="btn btn-secondary">Contact US</button>
+          <a href="mailto:vv0935@srmist.edu.in?subject=Query%20reg%20job%20openings&body=name%3A%20%3Cyour%20name%3E%0Ayour%20query%3A%20%3Cquery%3E" type="button" class="btn btn-outline-primary mt-4">Contact</a>
         </div>
         <div><p class="text-center mt-4">copyright Jovian</p></div>
 
     </div>
-
+    {% include 'footer.html' %}
 </body>
 
 </html>
